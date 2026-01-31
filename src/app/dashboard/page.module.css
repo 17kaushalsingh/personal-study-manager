@@ -1,0 +1,206 @@
+.layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  display: flex;
+  flex: 1;
+}
+
+.main {
+  flex: 1;
+  padding: var(--spacing-xl);
+  overflow-y: auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: var(--spacing-xl);
+}
+
+.title {
+  font-size: var(--font-2xl);
+  font-weight: var(--font-bold);
+  color: var(--text-primary);
+}
+
+.subtitle {
+  color: var(--text-secondary);
+  margin-top: var(--spacing-xs);
+}
+
+.grid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+/* Stats Row */
+.statsRow {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--spacing-md);
+}
+
+.statCard {
+  padding: var(--spacing-lg);
+}
+
+.statContent {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+
+.statIcon {
+  font-size: 2rem;
+}
+
+.statLabel {
+  font-size: var(--font-sm);
+  color: var(--text-secondary);
+}
+
+.statValue {
+  font-size: var(--font-xl);
+  font-weight: var(--font-bold);
+  color: var(--text-primary);
+}
+
+/* Tasks Card */
+.tasksCard {
+  grid-column: span 2;
+}
+
+.tasksHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tasksHeader h2 {
+  font-size: var(--font-lg);
+  font-weight: var(--font-semibold);
+}
+
+.tasksList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.emptyTasks {
+  text-align: center;
+  padding: var(--spacing-xl);
+  color: var(--text-muted);
+}
+
+/* Heatmap Card */
+.heatmapCard h2 {
+  font-size: var(--font-lg);
+  font-weight: var(--font-semibold);
+}
+
+/* Progress Card */
+.progressCard h2 {
+  font-size: var(--font-lg);
+  font-weight: var(--font-semibold);
+}
+
+.progressItem {
+  margin-bottom: var(--spacing-md);
+}
+
+.progressItem:last-child {
+  margin-bottom: 0;
+}
+
+.progressLabel {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: var(--spacing-xs);
+  font-size: var(--font-sm);
+  color: var(--text-secondary);
+}
+
+/* Subjects Card */
+.subjectsCard h2 {
+  font-size: var(--font-lg);
+  font-weight: var(--font-semibold);
+}
+
+.subjectsList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.subjectItem {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.subjectInfo {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.subjectIcon {
+  font-size: var(--font-lg);
+}
+
+.subjectName {
+  font-size: var(--font-sm);
+  font-weight: var(--font-medium);
+}
+
+.emptyState {
+  text-align: center;
+  color: var(--text-muted);
+  padding: var(--spacing-lg);
+}
+
+/* Loading */
+.loadingContainer {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-md);
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid var(--border);
+  border-top-color: var(--primary);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 768px) {
+  .main {
+    padding: var(--spacing-md);
+  }
+
+  .statsRow {
+    grid-template-columns: 1fr;
+  }
+
+  .tasksCard {
+    grid-column: span 1;
+  }
+}
