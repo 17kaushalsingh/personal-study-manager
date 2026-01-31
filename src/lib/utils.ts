@@ -100,11 +100,11 @@ export function getHeatmapLevel(count: number): 0 | 1 | 2 | 3 | 4 {
  */
 export function getDifficultyColor(difficulty: Difficulty): string {
   switch (difficulty) {
-    case 'easy':
+    case 'EASY':
       return 'var(--difficulty-easy)';
-    case 'medium':
+    case 'MEDIUM':
       return 'var(--difficulty-medium)';
-    case 'hard':
+    case 'HARD':
       return 'var(--difficulty-hard)';
     default:
       return 'var(--secondary)';

@@ -1,0 +1,99 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.monthLabels {
+  position: relative;
+  height: 20px;
+  margin-left: 32px;
+}
+
+.monthLabel {
+  position: absolute;
+  font-size: var(--font-xs);
+  color: var(--text-secondary);
+}
+
+.heatmapContainer {
+  display: flex;
+  gap: var(--spacing-xs);
+}
+
+.dayLabels {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.dayLabel {
+  height: 12px;
+  font-size: 10px;
+  color: var(--text-muted);
+  line-height: 12px;
+  text-align: right;
+  padding-right: var(--spacing-xs);
+}
+
+.grid {
+  display: flex;
+  gap: 3px;
+}
+
+.week {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.cell {
+  width: 11px;
+  height: 11px;
+  border-radius: 2px;
+  transition: transform var(--transition-fast);
+}
+
+.cell:hover {
+  transform: scale(1.2);
+}
+
+/* Levels */
+.level0 {
+  background: var(--heatmap-empty);
+}
+
+.level1 {
+  background: var(--heatmap-level-1);
+}
+
+.level2 {
+  background: var(--heatmap-level-2);
+}
+
+.level3 {
+  background: var(--heatmap-level-3);
+}
+
+.level4 {
+  background: var(--heatmap-level-4);
+}
+
+.legend {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  justify-content: flex-end;
+  margin-top: var(--spacing-sm);
+}
+
+.legendLabel {
+  font-size: var(--font-xs);
+  color: var(--text-muted);
+}
+
+.legendCell {
+  width: 11px;
+  height: 11px;
+  border-radius: 2px;
+}

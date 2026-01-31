@@ -1,0 +1,100 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--spacing-md) var(--spacing-xl);
+  background: var(--background-secondary);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: var(--z-sticky);
+}
+
+.left {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  font-size: var(--font-xl);
+  font-weight: var(--font-bold);
+  color: var(--primary);
+}
+
+.nav {
+  display: flex;
+  gap: var(--spacing-lg);
+}
+
+.navLink {
+  font-size: var(--font-sm);
+  font-weight: var(--font-medium);
+  color: var(--text-secondary);
+  transition: color var(--transition-fast);
+}
+
+.navLink:hover {
+  color: var(--text-primary);
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+
+.userName {
+  font-size: var(--font-sm);
+  color: var(--text-secondary);
+}
+
+.signOut {
+  padding: var(--spacing-xs) var(--spacing-sm);
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  font-size: var(--font-sm);
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.signOut:hover {
+  background: var(--secondary-light);
+  color: var(--text-primary);
+}
+
+.signIn {
+  padding: var(--spacing-sm) var(--spacing-md);
+  background: var(--primary);
+  border-radius: var(--radius-md);
+  font-size: var(--font-sm);
+  font-weight: var(--font-medium);
+  color: white;
+  transition: background var(--transition-fast);
+}
+
+.signIn:hover {
+  background: var(--primary-hover);
+}
+
+.loading {
+  font-size: var(--font-sm);
+  color: var(--text-muted);
+}
+
+@media (max-width: 768px) {
+  .nav {
+    display: none;
+  }
+
+  .header {
+    padding: var(--spacing-md);
+  }
+}

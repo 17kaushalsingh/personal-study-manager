@@ -62,10 +62,10 @@ export interface Task {
   createdAt: Date;
 }
 
-export type TaskType = 'problem' | 'learning' | 'review';
-export type TaskStatus = 'pending' | 'completed' | 'skipped';
-export type Platform = 'leetcode' | 'codeforces';
-export type Difficulty = 'easy' | 'medium' | 'hard';
+export type TaskType = 'PROBLEM' | 'LEARNING' | 'REVIEW';
+export type TaskStatus = 'PENDING' | 'COMPLETED' | 'SKIPPED';
+export type Platform = 'LEETCODE' | 'CODEFORCES';
+export type Difficulty = 'EASY' | 'MEDIUM' | 'HARD';
 
 // Problem Types (cached from external APIs)
 export interface Problem {

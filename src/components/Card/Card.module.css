@@ -1,0 +1,71 @@
+.card {
+  border-radius: var(--radius-lg);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+/* Variants */
+.default {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  box-shadow: var(--card-shadow);
+}
+
+.glass {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(var(--glass-blur));
+}
+
+.outline {
+  background: transparent;
+  border: 1px solid var(--border);
+}
+
+/* Padding */
+.padding-none {
+  padding: 0;
+}
+
+.padding-sm {
+  padding: var(--spacing-sm);
+}
+
+.padding-md {
+  padding: var(--spacing-md);
+}
+
+.padding-lg {
+  padding: var(--spacing-lg);
+}
+
+/* States */
+.hoverable:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px -4px rgba(0, 0, 0, 0.15);
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.clickable:focus-visible {
+  outline: 2px solid var(--border-focus);
+  outline-offset: 2px;
+}
+
+/* Sub-components */
+.header {
+  padding-bottom: var(--spacing-md);
+  border-bottom: 1px solid var(--border);
+  margin-bottom: var(--spacing-md);
+}
+
+.content {
+  flex: 1;
+}
+
+.footer {
+  padding-top: var(--spacing-md);
+  border-top: 1px solid var(--border);
+  margin-top: var(--spacing-md);
+}
