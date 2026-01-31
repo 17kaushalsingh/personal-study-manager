@@ -1,3 +1,4 @@
+import Link from "next/link";
 import styles from "./page.module.css";
 
 export default function Home() {
@@ -8,6 +9,16 @@ export default function Home() {
         <p className={styles.description}>
           Your personal study companion for tech job preparation
         </p>
+
+        <div className={styles.actions}>
+          <Link href="/login" className={styles.primaryButton}>
+            Sign In
+          </Link>
+          <Link href="/register" className={styles.secondaryButton}>
+            Create Account
+          </Link>
+        </div>
+
         <div className={styles.features}>
           <div className={styles.feature}>
             <h3>Track Progress</h3>

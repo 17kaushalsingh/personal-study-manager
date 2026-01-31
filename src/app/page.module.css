@@ -22,7 +22,51 @@
 .description {
   font-size: var(--font-lg);
   color: var(--text-secondary);
+  margin-bottom: var(--spacing-xl);
+}
+
+.actions {
+  display: flex;
+  gap: var(--spacing-md);
+  justify-content: center;
   margin-bottom: var(--spacing-2xl);
+}
+
+.primaryButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-md) var(--spacing-xl);
+  background: var(--primary);
+  color: white;
+  font-size: var(--font-base);
+  font-weight: var(--font-semibold);
+  border-radius: var(--radius-md);
+  transition: all var(--transition-fast);
+}
+
+.primaryButton:hover {
+  background: var(--primary-hover);
+  transform: translateY(-1px);
+}
+
+.secondaryButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-md) var(--spacing-xl);
+  background: transparent;
+  color: var(--primary);
+  font-size: var(--font-base);
+  font-weight: var(--font-semibold);
+  border: 2px solid var(--primary);
+  border-radius: var(--radius-md);
+  transition: all var(--transition-fast);
+}
+
+.secondaryButton:hover {
+  background: var(--primary-light);
+  transform: translateY(-1px);
 }
 
 .features {
