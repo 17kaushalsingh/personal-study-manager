@@ -5,6 +5,7 @@ import { useSession } from 'next-auth/react';
 import { useRouter } from 'next/navigation';
 import Header from '@/components/Header';
 import Sidebar from '@/components/Sidebar';
+import MobileNav from '@/components/MobileNav';
 import SubjectCard from '@/components/SubjectCard';
 import styles from './page.module.css';
 
@@ -87,6 +88,7 @@ export default function CurriculumPage() {
           </div>
         </main>
       </div>
+      <MobileNav />
     </div>
   );
 }

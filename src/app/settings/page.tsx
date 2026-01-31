@@ -5,14 +5,17 @@ import { useSession } from 'next-auth/react';
 import { useRouter } from 'next/navigation';
 import Header from '@/components/Header';
 import Sidebar from '@/components/Sidebar';
+import MobileNav from '@/components/MobileNav';
 import Card, { CardHeader, CardContent } from '@/components/Card';
 import Button from '@/components/Button';
+import { useTheme } from '@/context/ThemeContext';
 import { UserPreferences } from '@/types';
 import styles from './page.module.css';
 
 export default function SettingsPage() {
   const { data: session, status } = useSession();
   const router = useRouter();
+  const { setTheme } = useTheme();
   const [preferences, setPreferences] = useState<UserPreferences>({
     dailyProblems: 2,
     dailyLearningMinutes: 60,
@@ -235,7 +238,11 @@ export default function SettingsPage() {
                   <label>Theme</label>
                   <select
                     value={preferences.theme}
-                    onChange={(e) => setPreferences({ ...preferences, theme: e.target.value as 'light' | 'dark' | 'system' })}
+                    onChange={(e) => {
+                      const newTheme = e.target.value as 'light' | 'dark' | 'system';
+                      setPreferences({ ...preferences, theme: newTheme });
+                      setTheme(newTheme);
+                    }}
                   >
                     <option value="system">System</option>
                     <option value="light">Light</option>
@@ -251,6 +258,7 @@ export default function SettingsPage() {
           </div>
         </main>
       </div>
+      <MobileNav />
     </div>
   );
 }

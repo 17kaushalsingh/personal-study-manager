@@ -63,6 +63,7 @@
 @media (max-width: 768px) {
   .main {
     padding: var(--spacing-md);
+    padding-bottom: calc(var(--spacing-md) + 80px);
   }
 
   .grid {

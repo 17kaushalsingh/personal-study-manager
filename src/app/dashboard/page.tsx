@@ -5,6 +5,7 @@ import { useSession } from 'next-auth/react';
 import { useRouter } from 'next/navigation';
 import Header from '@/components/Header';
 import Sidebar from '@/components/Sidebar';
+import MobileNav from '@/components/MobileNav';
 import Card, { CardHeader, CardContent } from '@/components/Card';
 import TaskCard from '@/components/TaskCard';
 import Heatmap from '@/components/Heatmap';
@@ -299,6 +300,7 @@ export default function DashboardPage() {
           </div>
         </main>
       </div>
+      <MobileNav />
     </div>
   );
 }
